@@ -23,7 +23,7 @@ for frames_id in range(len(content)):
         #如果是中间贞
             else:
                 if content[frames_id+1][key_points_id][2] and content[frames_id-1][key_points_id][2] !=0:#前后不等于0
-                    gitcontent[frames_id][key_points_id
+                    content[frames_id][key_points_id
                     ][2]=(content[frames_id+1][key_points_id][2]+content[frames_id-1][key_points_id][2])/2
                 else:#后面等于0
                     times=1

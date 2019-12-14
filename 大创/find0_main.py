@@ -1,15 +1,15 @@
 import json
 import os
-file_dir=r'C:\Users\wsq\Desktop\截取后数据'
+notsucc=[]
+file_dir=r'C:\Users\wsq\Desktop\First_try\大创\data'
 filelist=[]
 for root,dirs,files in os.walk(file_dir):
     for file in files:
         if 'txt' in file:
             filelist.append(file)
-print(filelist)
 for name in filelist:
     try:
-        path=name
+        path=file_dir+'./'+name
         f=open(path,"r")
         content=f.read()
         f.close()
@@ -60,4 +60,6 @@ for name in filelist:
         print('over',name)
     except:
         print('!!!!!!!!!!!!!!!!!!!!',name)
-        continue
+        notsucc.append(name)
+
+print(notsucc)
